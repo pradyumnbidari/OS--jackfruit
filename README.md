@@ -58,7 +58,6 @@ Preparing the Alpine root filesystem and populating it with statically linked te
 **Pre-flight Environment Check**
 Evidence of the bypassed pre-flight script successfully verifying kernel header paths and namespace availability.
 
-
 **Supervisor Initialization**
 The supervisor daemon initialized, binding to the Unix Domain Socket and opening the kernel device.
 
