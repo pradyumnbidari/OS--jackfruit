@@ -53,44 +53,44 @@ ls -l /dev/container_monitor
 
 **Environment Preparation**
 Preparing the Alpine root filesystem and populating it with statically linked test binaries.
-![env_prep](screenshots/env_prep.png)
+
 
 **Pre-flight Environment Check**
 Evidence of the bypassed pre-flight script successfully verifying kernel header paths and namespace availability.
-![env_check](screenshots/env_check.png)
+
 
 **Supervisor Initialization**
 The supervisor daemon initialized, binding to the Unix Domain Socket and opening the kernel device.
-![alpha_super](screenshots/alpha_super.png)
+
 
 **Container Run Execution**
 CLI client successfully communicating with the supervisor to request a new isolated instance named 'alpha'.
-![alpha](screenshots/alpha.png)
+
 
 **PID Namespace Isolation**
 Inside the container, running `ps` proves the process is isolated from the host and running as PID 1.
-![pid_isolation](screenshots/pid_isolation.png)
+
 
 **Host-Side Process Tracking**
 The supervisor tracking the container via its global Host PID while the child remains jailed.
-![pid_isolation_super](screenshots/pid_isolation_super.png)
+
 
 **System Jail & Chroot Verification**
 Demonstrating that the container is locked into the Alpine environment and cannot access the Kali host filesystem.
-![sys_jail](screenshots/sys_jail.png)
+
 
 **Kernel Hard Limit Enforcement**
 Crucial evidence from `dmesg` showing the kernel module delivering a `SIGKILL` once the 50MiB hard limit was breached.
-![sys_jail_super](screenshots/sys_jail_super.png)
+
 
 **Multi-Container Concurrency**
 Running the `beta` container instance with a 100MB workload alongside the active `alpha` instance.
-![multi_alpha](screenshots/multi_alpha.png)
-![multi_beta](screenshots/multi_beta.png)
+
 
 **Supervisor Multi-Tenancy Logs**
 The supervisor event loop managing multiple PIDs and distinct container configurations concurrently via IPC.
-![multi_super](screenshots/multi_super.png)
+<img width="455" height="119" alt="env_prep" src="https://github.com/user-attachments/assets/3a3a70e1-08fd-428a-bb34-75d3e05fce03" />
+
 
 ---
 
