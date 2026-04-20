@@ -89,7 +89,7 @@ Running the `beta` container instance with a 100MB workload alongside the active
 
 **Supervisor Multi-Tenancy Logs**
 The supervisor event loop managing multiple PIDs and distinct container configurations concurrently via IPC.
-<img width="455" height="119" alt="env_prep" src="https://github.com/user-attachments/assets/3a3a70e1-08fd-428a-bb34-75d3e05fce03" />
+
 
 
 ---
